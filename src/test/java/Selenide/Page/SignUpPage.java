@@ -31,7 +31,7 @@ public class SignUpPage {
         passwordMatch.setValue(passMatch);
     }
 
-    @Step("Проверяем, что выведенный текст соответствует ожидаемому")
+    @Step("Проверяем, что выведенный текст соответствует ожидаемому.")
     public static void checkText(String actualString, String expectedString) {
         if (!actualString.equals(expectedString)) {
             throw new AssertionError("Expected: " + expectedString + ", but got: " + actualString);

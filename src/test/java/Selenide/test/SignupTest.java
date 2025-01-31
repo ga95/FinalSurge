@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class SignupTest extends BaseTest {
     @Test(priority = 1, testName = "Поле имени не заполнено", retryAnalyzer = Retry.class)
-    @Description("Проверка регистрации с незаполненным полем имени")
+    @Description("Проверка регистрации с незаполненным полем имени.")
     @Severity(SeverityLevel.CRITICAL)
     @Epic("FinalSurge-1.0")
     @Feature("Signup at FinalSurge")

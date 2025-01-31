@@ -7,7 +7,6 @@ public class Retry implements IRetryAnalyzer {
 
     private static final int MAX_RETRY = 5;
     private int attempt = 1;
-
     @Override
     public boolean retry(ITestResult iTestResult) {
         if (!iTestResult.isSuccess()) {

@@ -14,6 +14,7 @@ public class TestListener implements ITestListener {
         System.out.println((String.format("======================================== СТАРТ ТЕСТА %s ========================================", iTestResult.getName())));
     }
 
+
     public void onTestSuccess(ITestResult iTestResult) {
         System.out.printf("======================================== ЗАВЕРШЕНИЕ ТЕСТА %s Duration: %ss ========================================%n", iTestResult.getName(),
                 getExecutionTime(iTestResult));

@@ -19,7 +19,7 @@ public class BaseTest {
     protected SignUpPage signUpPage;
 
     @BeforeMethod
-    @Step("Открытие браузера, ожидание 5сек на загрузку.")
+    @Step("Открытие браузера, ожидание 5сек на загрузку")
     public void setup() {
         Configuration.browser = "chrome";
         Configuration.pageLoadStrategy = "eager";

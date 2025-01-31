@@ -43,7 +43,7 @@ public class LoginPage {
         signUpLink.click();
     }
 
-    @Step("Нажать на кнопку авторизироваться")
+    @Step("Нажать на кнопку авторизироваться.")
     public static void clickLoginButton() {
         loginButton.click();
     }
