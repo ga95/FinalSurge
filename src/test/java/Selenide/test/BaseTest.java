@@ -10,6 +10,7 @@ import org.testng.annotations.Listeners;
 import utils.TestListener;
 
 import static Selenide.Page.LoginPage.openMainPage;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 
 @Listeners(TestListener.class)
@@ -30,7 +31,8 @@ public class BaseTest {
         signUpPage = new SignUpPage();
     }
 
-//    @AfterMethod(alwaysRun = true)
-//    public void exit() {
-//    }
+    @AfterMethod(alwaysRun = true)
+    public void exit() {
+        getWebDriver().quit();
+    }
 }

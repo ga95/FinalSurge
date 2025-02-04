@@ -7,28 +7,25 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class SignUpPage {
 
-    private static final SelenideElement submitButton = $x("//*[@type=\"submit\"]");
-    private static final SelenideElement firstName = $x("//*[@id=\"create_first\"]");
-    private static final SelenideElement lastName = $x("//*[@id=\"create_last\"]");
-    private static final SelenideElement emailField = $x("//*[@id=\"create_email\"]");
-    private static final SelenideElement passwordMeter = $x("//*[@id=\"password_meter\"]");
-    private static final SelenideElement passwordMatch = $x("//*[@id=\"create_passwordmatch\"]");
-
-    public SignUpPage() {
-    }
+    private static final SelenideElement SUBMIT_BUTTON = $x("//*[@type=\"submit\"]");
+    private static final SelenideElement FIRST_NAME = $x("//*[@id=\"create_first\"]");
+    private static final SelenideElement LAST_NAME = $x("//*[@id=\"create_last\"]");
+    private static final SelenideElement EMAIL_FIELD = $x("//*[@id=\"create_email\"]");
+    private static final SelenideElement PASSWORD_METER = $x("//*[@id=\"password_meter\"]");
+    private static final SelenideElement PASSWORD_MARCH = $x("//*[@id=\"create_passwordmatch\"]");
 
     @Step("Нажимаем на кнопку зарегестрироваться")
     public static void clickSubmitLink() {
-        submitButton.click();
+        SUBMIT_BUTTON.click();
     }
 
     @Step("Заполняем форму")
     public void fillForm(String first, String last, String email, String passMeter, String passMatch) {
-        firstName.setValue(first);
-        lastName.setValue(last);
-        emailField.setValue(email);
-        passwordMeter.setValue(passMeter);
-        passwordMatch.setValue(passMatch);
+        FIRST_NAME.setValue(first);
+        LAST_NAME.setValue(last);
+        EMAIL_FIELD.setValue(email);
+        PASSWORD_METER.setValue(passMeter);
+        PASSWORD_MARCH.setValue(passMatch);
     }
 
     @Step("Проверяем, что выведенный текст соответствует ожидаемому.")
@@ -37,5 +34,4 @@ public class SignUpPage {
             throw new AssertionError("Expected: " + expectedString + ", but got: " + actualString);
         }
     }
-
 }
